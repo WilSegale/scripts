@@ -1,4 +1,5 @@
 #!/bin/bash
+chmod +x hydra.sh
 clear
 echo 'Starting...'
 function run() {
