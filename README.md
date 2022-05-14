@@ -1,2 +1,2 @@
-# shell
- has shell scripts
+#shell
+has shell scripts

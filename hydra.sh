@@ -1,23 +1,27 @@
 #!/bin/bash
 chmod +x hydra.sh
+rm -rf output.txt
 clear
 echo 'Starting...'
+
 function run() {
 	brew install hydra && brew install nmap
 	clear
 	read -p "Do you want SSH(22) or VNC(5900). To see all type (ALL): " service
 
-		if [ $service == "ALL" ] 
+		if [[ $service == "ALL" ]] 
+	
 			then
-			sudo nmap -sS 192.168.1.1/24 --open
+				sudo nmap -sS 192.168.1.1/24 --open
 
-		elif [ $service == "all" ] 
+		elif [[ $service == "all" ]] 
 			then 
 				sudo nmap -sS 192.168.1.1/24 --open
 
 		else
 			sudo nmap -sS 192.168.1.1/24 -p $service --open
 	fi
+
 	echo "To crack VNC(5900) type 'NONE' in the input username"
 	read -p "input username: " user
 	read -p "input hostname: " host

@@ -1,4 +1,4 @@
-!#/bin/bash
+#/bin/bash
 
 echo "whats your name"
 
@@ -10,7 +10,7 @@ read age
 
 echo "hello $RANDOM you are $age"
 
-#echo "$pwd, $shell, $user, $hostname"
+echo "$PWD, $SHELL, $USER, $HOSTNAME, $Do, $ALL"
 
 sleep 2
 
