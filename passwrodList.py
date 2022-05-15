@@ -59,4 +59,5 @@ while True:
 			
 	# print out password
 	print(password,file=textFile)
+	break
 
