@@ -1,10 +1,11 @@
 #!/bin/bash
 sudo rm -rf output.txt
 clear
+say "Loading"
 echo "Loading..."
 for ((k = 0; k <= 10; k++)); do
     echo -n "[ "
-    for ((i = 0; i <= k; i++)); do echo -n "###"; done
+    for ((i = 0; i <= k; i++)); do echo -n "---"; done
     sleep 1
     for ((j = i; j <= 10; j++)); do echo -n "   "; done
     v=$((k * 10))
@@ -15,8 +16,8 @@ echo
 chmod +x *
 
 clear
+say "Starting..."
 echo 'Starting...'
-
 function run() {
     brew install hydra && brew install nmap
     clear
@@ -24,12 +25,17 @@ function run() {
 
     if [[ $service == "ALL" ]]; then
         sudo nmap -sS 192.168.1.1/24 --open
+        say "Scan has completed"
+
 
     elif [[ $service == "all" ]]; then
         sudo nmap -sS 192.168.1.1/24 --open
+        say "Scan has completed"
 
     else
         sudo nmap -sS 192.168.1.1/24 -p $service --open
+        say "Scan has completed"
+
     fi
 
     echo "To crack VNC(5900) type 'NONE' in the input username"
