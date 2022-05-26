@@ -19,7 +19,6 @@ clear
 say "Starting..."
 echo 'Starting...'
 function run() {
-    brew install hydra && brew install nmap
     clear
     read -p "Do you want SSH(22) or VNC(5900). To see all type (ALL): " service
 
