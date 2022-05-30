@@ -1,0 +1,1 @@
+Type "bash requirements" first
