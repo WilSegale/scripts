@@ -3,7 +3,7 @@ import array
 
 # maximum length of password needed
 # this can be changed to suit your password length
-textFile = open("rockyou.txt2","a")
+textFile = open("rockyou.txt","a")
 MAX_LEN = int(input(">>> "))
 
 while True:

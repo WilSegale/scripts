@@ -20,11 +20,8 @@ function run() {
     clear
     read -p "Do you want SSH(22) or VNC(5900). To see all type (ALL): " service
 
-    if [[ $service == "ALL" ]]; then
-        sudo nmap -sS 192.168.1.1/24 --open
-
-    elif [[ $service == "all" ]]; then
-        sudo nmap -sS 192.168.1.1/24 --open        
+    if [ $service == "ALL" ]  || [ $service == "all" ]; then
+        sudo nmap -sS 192.168.1.1/24 --open   
 
     else
         sudo nmap -sS 192.168.1.1/24 -p $service --open
