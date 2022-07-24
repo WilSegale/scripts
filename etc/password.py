@@ -1,4 +1,5 @@
-import random, string
+import random
+import string
 n = 0
 while True:
     n = n-1
