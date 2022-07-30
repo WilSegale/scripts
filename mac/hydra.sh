@@ -5,7 +5,7 @@ wget -q --spider http://google.com
 if [ $? -eq 0 ]; then
     echo ""
 else
-    echo "You are Offline please connect to the internet"
+    echo "You are offline please connect to the internet"
     exit
 fi
 clear
@@ -20,7 +20,14 @@ for ((k = 0; k <= 10; k++)); do
             echo -n "$v%" $'\r'
 done
 echo
+wget -q --spider http://google.com
 
+if [ $? -eq 0 ]; then
+    echo ""
+else
+    echo "You are offline please connect to the internet"
+    exit
+fi
 clear
 echo 'Starting...'
 function run() {
